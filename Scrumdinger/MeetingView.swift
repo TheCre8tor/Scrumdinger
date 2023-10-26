@@ -9,7 +9,18 @@ import SwiftUI
 
 struct MeetingView: View {
     var body: some View {
-        ProgressView(value: 10, total: 15);
+        VStack {
+            ProgressView(value: 10, total: 25)
+            HStack {
+                VStack {
+                    Text("Seconds Elapsed")
+                    Label("300", systemImage: "hourglass.bottomhalf.fill")
+                }
+                VStack {
+                    Text("Seconds Remaining")
+                }
+            }
+        };
     }
 }
 
